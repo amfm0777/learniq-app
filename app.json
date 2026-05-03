@@ -1,29 +1,41 @@
 {
   "expo": {
-    "name": "testdepago",
-    "slug": "testdepago",
+    "name": "LearnIQ - Evaluación de Aprendizaje",
+    "slug": "learniq-evaluacion-aprendizaje",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0D0B1E"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.learniq.evaluacion"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0D0B1E"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.learniq.evaluacion",
+      "versionCode": 1,
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Descubre tu estilo de aprendizaje único con tests científicamente fundamentados.",
+    "extra": {
+      "eas": {
+        "projectId": "de8da12b-d474-42e0-8809-05370925d4fc"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
