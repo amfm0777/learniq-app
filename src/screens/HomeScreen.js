@@ -48,9 +48,13 @@ const TestCard = ({ title, subtitle, emoji, duration, questions, gradient, tag, 
               <Text style={styles.testCardMetaText}>{T.home.questions(questions)}</Text>
             </View>
           </View>
-          <View style={styles.startBtn}>
+          <LinearGradient
+            colors={['rgba(255,255,255,0.25)', 'rgba(255,255,255,0.12)']}
+            start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+            style={styles.startBtn}
+          >
             <Text style={styles.startBtnText}>{T.home.startBtn}</Text>
-          </View>
+          </LinearGradient>
         </LinearGradient>
       </Animated.View>
     </TouchableOpacity>
@@ -77,33 +81,20 @@ export default function HomeScreen({ navigation }) {
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <Animated.View style={{ opacity: fadeAnim, transform: [{ translateY: slideAnim }] }}>
+          {/* Header compacto */}
           <View style={styles.header}>
             <BrainIcon />
             <Text style={styles.appName}>LearnIQ</Text>
             <Text style={styles.tagline}>{T.home.tagline}</Text>
           </View>
 
-          <View style={styles.chips}>
-            <FeatureChip emoji="🎯" text={T.home.chip1} />
-            <FeatureChip emoji="📊" text={T.home.chip2} />
-            <FeatureChip emoji="🚀" text={T.home.chip3} />
-          </View>
-
-          <View style={styles.heroCard}>
-            <LinearGradient colors={['rgba(124,58,237,0.15)', 'rgba(59,130,246,0.08)']} style={styles.heroCardGradient}>
-              <Text style={styles.heroTitle}>{T.home.heroTitle}</Text>
-              <Text style={styles.heroDesc}>{T.home.heroDesc}</Text>
-            </LinearGradient>
-          </View>
-
-          <Text style={styles.sectionTitle}>{T.home.sectionTitle}</Text>
-
+          {/* Test Cards — protagonistas */}
           <TestCard
             title={T.home.basicCard.title}
             subtitle={T.home.basicCard.subtitle}
             emoji="🎓"
             duration={T.home.basicCard.duration}
-            questions={20}
+            questions={6}
             gradient={['#1E1060', '#2D1B8B']}
             tag={T.home.basicCard.tag}
             tagColor="#A78BFA"
@@ -122,6 +113,14 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate('Payment')}
           />
 
+          {/* Feature chips */}
+          <View style={styles.chips}>
+            <FeatureChip emoji="🎯" text={T.home.chip1} />
+            <FeatureChip emoji="📊" text={T.home.chip2} />
+            <FeatureChip emoji="🚀" text={T.home.chip3} />
+          </View>
+
+          {/* About section */}
           <View style={styles.aboutSection}>
             <Text style={styles.aboutTitle}>{T.home.aboutTitle}</Text>
             <View style={styles.aboutItem}>
@@ -183,8 +182,8 @@ const styles = StyleSheet.create({
   testCardMetaItem: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   testCardMetaIcon: { fontSize: 13 },
   testCardMetaText: { fontSize: 12, color: 'rgba(255,255,255,0.7)' },
-  startBtn: { backgroundColor: 'rgba(255,255,255,0.15)', paddingVertical: 10, paddingHorizontal: 16, borderRadius: 12, alignSelf: 'flex-start', borderWidth: 1, borderColor: 'rgba(255,255,255,0.2)' },
-  startBtnText: { color: '#fff', fontWeight: '700', fontSize: 14 },
+  startBtn: { paddingVertical: 14, paddingHorizontal: 0, borderRadius: 14, alignSelf: 'stretch', alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)', marginTop: 4 },
+  startBtnText: { color: '#fff', fontWeight: '800', fontSize: 16, letterSpacing: 0.5 },
   aboutSection: { backgroundColor: Colors.bg.card, borderRadius: 16, padding: 18, marginBottom: 16, borderWidth: 1, borderColor: Colors.bg.glassBorder },
   aboutTitle: { fontSize: 15, fontWeight: '700', color: Colors.text.primary, marginBottom: 14 },
   aboutItem: { flexDirection: 'row', gap: 12, marginBottom: 14 },
