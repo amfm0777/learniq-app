@@ -10,6 +10,8 @@ import BasicIntroScreen from './src/screens/BasicIntroScreen';
 import BasicTestScreen from './src/screens/BasicTestScreen';
 import BasicResultScreen from './src/screens/BasicResultScreen';
 import PremiumIntroScreen from './src/screens/PremiumIntroScreen';
+import PremiumTestScreen from './src/screens/PremiumTestScreen';
+import PremiumResultScreen from './src/screens/PremiumResultScreen';
 import DisclaimerScreen from './src/screens/DisclaimerScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 
@@ -37,6 +39,8 @@ export default function App() {
           {/* 💳 Pago → luego Premium */}
           <Stack.Screen name="Payment" component={PaymentScreen} />
           <Stack.Screen name="PremiumIntro" component={PremiumIntroScreen} />
+          <Stack.Screen name="PremiumTest" component={PremiumTestScreen} />
+          <Stack.Screen name="PremiumResult" component={PremiumResultScreen} />
 
           {/* Páginas de soporte */}
           <Stack.Screen name="Disclaimer" component={DisclaimerScreen} />
