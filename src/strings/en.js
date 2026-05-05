@@ -103,7 +103,7 @@ export default {
     productSub: 'Based on Howard Gardner\'s theory · 40 questions',
     priceNote: 'One-time payment · No subscriptions',
     features: [
-      { icon: '🧠', text: '40 scientifically validated questions' },
+      { icon: '🧠', text: '40 questions to help you understand how you learn' },
       { icon: '📊', text: 'Detailed profile of all 8 intelligences' },
       { icon: '🎯', text: 'Personalized career recommendations' },
       { icon: '📚', text: 'Exclusive learning strategies' },

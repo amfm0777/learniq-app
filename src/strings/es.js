@@ -103,7 +103,7 @@ export default {
     productSub: 'Basado en la teoría de Howard Gardner · 40 preguntas',
     priceNote: 'Pago único · Sin suscripciones',
     features: [
-      { icon: '🧠', text: '40 preguntas científicamente validadas' },
+      { icon: '🧠', text: '40 preguntas que te ayudarán a entender cómo aprendes' },
       { icon: '📊', text: 'Perfil detallado de las 8 inteligencias' },
       { icon: '🎯', text: 'Recomendaciones de carrera personalizadas' },
       { icon: '📚', text: 'Estrategias de aprendizaje exclusivas' },

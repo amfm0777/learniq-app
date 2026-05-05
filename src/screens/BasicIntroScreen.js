@@ -51,6 +51,12 @@ export default function BasicIntroScreen({ navigation }) {
           </View>
         </View>
 
+        <TouchableOpacity onPress={() => navigation.navigate('BasicTest')} style={styles.ctaBtn}>
+          <LinearGradient colors={['#7C3AED', '#3B82F6']} style={styles.ctaBtnGradient} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
+            <Text style={styles.ctaBtnText}>{T.basicIntro.cta}</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+
         <View style={styles.descCard}>
           <Text style={styles.descTitle}>{T.basicIntro.descTitle}</Text>
           <Text style={styles.descText}>{BASIC_TEST_INTRO.description}</Text>
@@ -79,12 +85,6 @@ export default function BasicIntroScreen({ navigation }) {
             </Text>
           </Text>
         </View>
-
-        <TouchableOpacity onPress={() => navigation.navigate('BasicTest')} style={styles.ctaBtn}>
-          <LinearGradient colors={['#7C3AED', '#3B82F6']} style={styles.ctaBtnGradient} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
-            <Text style={styles.ctaBtnText}>{T.basicIntro.cta}</Text>
-          </LinearGradient>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );
