@@ -165,6 +165,12 @@ export default function PaymentScreen({ navigation }) {
             <Text style={styles.securityIcon}>🔒</Text>
             <Text style={styles.securityText}>{p.security}</Text>
           </View>
+
+          {__DEV__ && (
+            <TouchableOpacity onPress={() => setStep('success')} style={styles.devBtn}>
+              <Text style={styles.devBtnText}>⚡ DEV: Simular pago exitoso</Text>
+            </TouchableOpacity>
+          )}
         </Animated.View>
       </ScrollView>
     </View>
@@ -214,4 +220,6 @@ const styles = StyleSheet.create({
   successBtn: { width: '100%', borderRadius: 16, overflow: 'hidden' },
   successBtnGradient: { paddingVertical: 18, alignItems: 'center' },
   successBtnText: { color: '#fff', fontWeight: '800', fontSize: 16 },
+  devBtn: { marginTop: 16, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(245,158,11,0.4)', backgroundColor: 'rgba(245,158,11,0.08)', paddingVertical: 12, alignItems: 'center' },
+  devBtnText: { color: '#F59E0B', fontWeight: '700', fontSize: 13 },
 });
